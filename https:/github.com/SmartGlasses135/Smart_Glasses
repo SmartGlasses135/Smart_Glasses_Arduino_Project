@@ -3,7 +3,7 @@ SoftwareSerial myserial (2,3);
 
 unsigned long signal_len,t1,t2;   //time for which button is pressed
 int inputPin = 7;                 //input pin for push button
-int puzzerPin = 11;                   //outpu pin for LED
+int puzzerPin = 11;                   //output pin for puzzer
 String code = "";                 //string in which one alphabet is stored
 
 
@@ -29,10 +29,10 @@ void loop()
 NextDotDash:
   while (digitalRead(inputPin) == HIGH) {}
   t1 = millis();                            //time at button press
-  digitalWrite(puzzerPin, HIGH);               //LED on while button pressed
+  digitalWrite(puzzerPin, HIGH);               //puzzer on while button pressed
   while (digitalRead(inputPin) == LOW) {}
   t2 = millis();                            //time at button release
-  digitalWrite(puzzerPin, LOW);                //LED off on button release
+  digitalWrite(puzzerPin, LOW);                //puzzer off on button release
   signal_len = t2 - t1;                     //time for which button is pressed
   if (signal_len > 50)                      //to account for switch debouncing
   {
