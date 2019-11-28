@@ -1,0 +1,23 @@
+void setup() {
+  
+  pinMode(7,INPUT);
+  Serial.begin(9600);
+  pinMode(13,OUTPUT);
+  
+  
+
+}
+
+void loop() {
+  
+  Serial.print("IRSENSOR");
+  Serial.println(digitalRead(7));
+
+  if(digitalRead(7)==0){
+    delay(12000);
+    digitalWrite(13,HIGH);
+  }
+ else{
+  digitalWrite(13,LOW);
+ }
+}
