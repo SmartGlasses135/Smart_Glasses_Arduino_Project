@@ -63,10 +63,40 @@ void convertor()
   static String letters[] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-",
                              ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "E"
                             };
-  int i = 0;
-  if (code == ".-.-.-")
+  int i = 0;                            
+  if (code == "......")
   {
-    Serial.print(".");        //for break
+    Serial.print(" ");
+    myserial.write(" ");//for break
+  }else if (code == ".....")
+  {
+    Serial.print(".");
+    myserial.write(".");//for break
+  }
+  else if (code == "-....")
+  {
+    Serial.print("I feel pain ,I want taking medicine ");
+    myserial.write("I feel pain,I want taking medicine ");//for break
+  }
+  else if (code == ".-...")
+  {
+    Serial.print("Iam hungry ");
+    myserial.write("Iam hungry ");//for break
+  }
+  else if (code == "..-..")
+  {
+    Serial.print("Iam thirsty ");
+    myserial.write("Iam thirsty  ");//for break
+  }
+  else if (code == "...-.")
+  {
+    Serial.print("I need help ");
+    myserial.write("I need help ");//for break
+  }
+  else if (code == "....-")
+  {
+    Serial.print("I feel hot ");
+    myserial.write("I feel hot ");//for break
   }
   else
   {
@@ -84,6 +114,7 @@ void convertor()
     if (letters[i] == "E")
     {
       Serial.println("");  //if input code doesn't match any letter, error
+      myserial.println("");
     }
   }
   code = "";                            //reset code to blank string
