@@ -5,7 +5,7 @@ Disabled people with (ALS) or (MND) disease that causes the death of neurons con
  Project Solution: Communicating with Eye Blinking moves that every blink the patient do will make a sound by a buzzer that by using Morse Code, others can understand what the patient want to say.
 
 Link to code for our app:-
-https://github.com/Nadaelmadah/smart-Glasses
+https://github.com/Nadaelmadah/smart-Glasses.git
 
 Our youtube video link:-
 
